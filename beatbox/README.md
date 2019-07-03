@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BeatBox
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+* [1. Preámbulo](#1-preámbulo)
+* [2. Resumen del proyecto](#2-Resumen-del-proyecto)
+* [3. Objetivos de aprendizaje](#3-Objetivos-de-aprendizaje)
+* [4. Consideraciones generales](#4-consideraciones-generales)
+* [5. Entrega](#5-Entrega)
+* [6. Hacker Edition](#6-Hacker-Edition)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+***
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 1. Preámbulo
 
-### `npm test`
+En este proyecto tendremos la oportunidad de crear un sitio web con ReactJs donde el usuario pueda buscar canciones de artistas que se encuentren en la nube de Spotify y podrá escuchar un preview de 30 segundos de cada una.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***
 
-### `npm run build`
+## 2. Resumen del proyecto
+React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Basado en componentes
+Crea componentes encapsulados que manejen su propio estado, y conviértelos en interfaces de usuario complejas.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 3. Objetivos de aprendizaje
 
-### `npm run eject`
+El objetivo principal de aprendizaje es aprender a utilizar Redux con React.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+***
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 4. Consideraciones generales
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Este proyecto se debe "resolver" de forma individual.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* La lógica del proyecto debe estar implementada completamente en React.
 
-## Learn More
+* La aplicación debe ser un Single Page App y una web app que sea responsive.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Necesitamos pensar bien en el aspecto UX de de quienes van a buscar la música, el tamaño y aspecto de los botones, un diseño intuitivo, etc.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Los tests unitarios deben cubrir un mínimo del 70% de statements, functions, lines y branches.
 
-### Code Splitting
+***
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 5. Entrega
 
-### Analyzing the Bundle Size
+Como entregables, al final del proyecto debes presentar:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* Link a repositorio en GitHub con tu código fuente
 
-### Making a Progressive Web App
+***
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## 6. Parte Opcional (Hacker edition)
+Features/características extra sugeridas:
 
-### Advanced Configuration
+* Agregar propuestas de funcionalidad para una mejor experiencia de usuario.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+***
 
-### Deployment
+### Otros recursos
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+* [Axios](https://github.com/axios/axios/)
+* [Spotify SDK](https://developer.spotify.com/)
+* [ Redux](https://es.redux.js.org/)
+* [ React Spinkit](https://github.com/dotamir/react-SpinKit)
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+***
