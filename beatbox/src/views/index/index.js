@@ -4,11 +4,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 //import SongItem from './SongItem';
-import {checkSignIn} from '../../actions/index';
+import { checkSignIn } from '../../actions';
 
 import './index.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import { checkSignIn } from '../../actions';
 
 class Index extends Component {
     constructor() {
@@ -16,6 +15,10 @@ class Index extends Component {
         this.state = {
             song: ""
         }
+    }
+
+    componentWillMount(){
+        this.props.checkSignIn();
     }
     render() {
         console.log(this.props);
@@ -32,7 +35,8 @@ class Index extends Component {
                                 onChange={(e) => { this.setState({ song: e.target.value }) }}
                                 value={this.state.song}
                             />
-                            <a href="hola" className="waves-effect waves-light btn green">
+                            <a href="hola" className="waves-effect waves-light btn green"
+                                            onClick= {() => alert(0)}>
                                 <i className="fa fa-search"></i>
                             </a>
 
@@ -60,7 +64,7 @@ function mapStateToProps(state) {
 //Se encarga de enviar el action al store
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-
+checkSignIn
     }, dispatch);
 }
 
