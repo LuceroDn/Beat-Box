@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 //import SongItem from './SongItem';
+import {checkSignIn} from '../../actions/index';
 
 import './index.css';
 import 'materialize-css/dist/css/materialize.min.css';
+import { checkSignIn } from '../../actions';
 
 class Index extends Component {
     constructor() {
