@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 //import SongItem from './SongItem';
-import { checkSignIn } from '../../actions';
+import { checkSignIn, search } from '../../actions';
 
 import './index.css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -21,7 +21,7 @@ class Index extends Component {
         this.props.checkSignIn();
     }
     render() {
-        console.log(this.props);
+        const { song } = this.state;
         return (
             <div className="index">
                 <div className="card">
@@ -33,10 +33,10 @@ class Index extends Component {
                                 className="index-searchBox-input"
                                 placeholder="Cancion"
                                 onChange={(e) => { this.setState({ song: e.target.value }) }}
-                                value={this.state.song}
+                                value={song}
                             />
                             <a href="hola" className="waves-effect waves-light btn green"
-                                            onClick= {() => alert(0)}>
+                                            onClick= {(e) => this.props.search(song)}>
                                 <i className="fa fa-search"></i>
                             </a>
 
@@ -64,7 +64,8 @@ function mapStateToProps(state) {
 //Se encarga de enviar el action al store
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-checkSignIn
+checkSignIn,
+search
     }, dispatch);
 }
 
