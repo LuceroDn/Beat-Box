@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 
 import {TrackHandler, Client} from 'spotify-sdk';
 
@@ -28,7 +28,7 @@ export const checkSignIn = () => {
 }
 
 const startFetch = () => { return { type: "IS_FETCHING", isFetching: true}};
-const errorFetch = (err) => { return { type: "ERROR_FETCH", isFetching: false}};
+const errorFetch = (err) => { return { type: "ERROR_FETCH", isFetching: false, err}};
 const completeFetch = (data) => { return { type: "COMPLETE_FETCH", isFetching: false, payload: data}};
 
 export const search = (trackName) => {
@@ -37,7 +37,6 @@ export const search = (trackName) => {
         let track = new TrackHandler();
         track.search(trackName, {limit: 5})
         .then (trackCollection => {
-            console.log(trackCollection);
             dispatch(completeFetch(trackCollection));
         })
         .catch(err => {

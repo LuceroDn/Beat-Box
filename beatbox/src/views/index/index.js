@@ -22,9 +22,10 @@ class Index extends Component {
     }
     render() {
         const { song } = this.state;
+        console.log(this.props);
         return (
-            <div className="index">
-                <div className="card">
+            <div className="index background">
+                <div className="card #424242 grey darken-3">
                     <div className="card-content">
                         <div className="index-searchBox">
 
@@ -35,7 +36,7 @@ class Index extends Component {
                                 onChange={(e) => { this.setState({ song: e.target.value }) }}
                                 value={song}
                             />
-                            <a href="hola" className="waves-effect waves-light btn green"
+                            <a href="./" className="waves-effect waves-light btn green"
                                             onClick= {(e) => this.props.search(song)}>
                                 <i className="fa fa-search"></i>
                             </a>
@@ -44,7 +45,7 @@ class Index extends Component {
                     </div>
                 </div>
 
-                <div className="card index-results-card">
+                <div className="card index-results-card #424242 grey darken-3">
                     <div className="card-content">
 
                     </div>
@@ -57,7 +58,8 @@ class Index extends Component {
 
 function mapStateToProps(state) {
     return {
-        routes: state.routes
+        routes: state.routes,
+        songs: state.player
     }
 }
 
